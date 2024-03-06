@@ -8,10 +8,24 @@ import { Component } from '@angular/core';
 export class FormCalcComponent {
   num1: number = 0;
   num2: number = 0;
-  sum: number = 0;
+  answer: number = 0;
 
-  onClickSum() {
-    this.sum = this.num1 + this.num2;
-    return this.sum;
+  calc(operation: string) {
+    switch(operation){
+      case '+':
+        this.answer = this.num1 + this.num2; break;
+      case '-':
+        this.answer = this.num1 - this.num2; break;
+      case '*':
+        this.answer = this.num1 * this.num2; break;
+      case '/':
+        this.answer = this.num1 / this.num2; break;
+      case '^':
+        this.answer = this.num1 ** this.num2; break;
+      case 'bin':
+        this.answer = +(this.num1.toString(2));
+    }
+
+    return this.answer;
   }
 }

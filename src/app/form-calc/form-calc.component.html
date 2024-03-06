@@ -4,8 +4,15 @@
     <div class="content">
       <input type="number" [(ngModel)]="num1" name="num1">
       <input type="number" [(ngModel)]="num2" name="num2">
-      <button (click)="onClickSum();">Somar</button>
-      <div class="answer">{{ sum }}</div>
+      <div class="buttons">
+        <button (click)="calc('+');">+</button>
+        <button (click)="calc('-');">-</button>
+        <button (click)="calc('*');">*</button>
+        <button (click)="calc('/');">/</button>
+        <button (click)="calc('^');">^</button>
+        <button (click)="calc('bin');">bin</button>
+      </div>
+      <div class="answer">{{ answer }}</div>
     </div>
   </form>
 </div>
