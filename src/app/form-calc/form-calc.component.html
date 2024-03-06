@@ -1,7 +1,12 @@
-<form>
-    <input type="number" [(ngModel)]="num1" name="num1">
-    <input type="number" [(ngModel)]="num2" name="num2">
-    <button (click)="onClickSum();">Somar</button>
-    {{ sum }}
+<div class="container">
+  <form>
+    <h1 style="text-align: center;">Calculadora</h1>
+    <div class="content">
+      <input type="number" [(ngModel)]="num1" name="num1">
+      <input type="number" [(ngModel)]="num2" name="num2">
+      <button (click)="onClickSum();">Somar</button>
+      <div class="answer">{{ sum }}</div>
+    </div>
   </form>
+</div>
   
